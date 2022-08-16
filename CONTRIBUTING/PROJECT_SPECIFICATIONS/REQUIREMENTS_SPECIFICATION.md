@@ -1,4 +1,4 @@
-# plAI-Draw 
+# Project Codename Stair-Climbing-Robot 
 ### Software Requirements Specification
 <br>
 
