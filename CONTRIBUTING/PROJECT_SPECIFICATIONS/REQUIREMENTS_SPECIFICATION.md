@@ -26,6 +26,7 @@ REFERENCE CITATION HERE].
 
 ### 1.4) References
 [CITE AND ADD PROJECT ROADMAP LINK HERE]
+[CITE AND ADD NASA THE POWER OF TEN REFERENCE HERE]
 
 
 ## 2) Overall description
@@ -41,11 +42,30 @@ release 1.0.
 ### 2.2) User classes and characteristics
 | User Class | Description |
 |------------|-------------|
-| ADD HERE   | ADD HERE    |
+| Project Developers (favored) | Any developers contributing to Project Codename "Stair-Climbing-Robot". They are the primarily targeted user class as this project is intended for hands-on practice implementing reinforcement learning in a robotics context. | 
+| Other Developers | Developers of other, unrelated projects. All code will be released as open-source and can be used by developers in other projects. |
 
 ### 2.3) Operating environment
+*OE-1*: Project software shall operate on the Lego Mindstorms EV3 
+Intelligent Brick.
+
+*OE-2*: Project software shall operate correctly with ev3dev, an embedded 
+Linux distribution based on Debian, version 2020-04-10.
+
+*OE-3*: Project software shall be accessed and updated through SSH 
+communication between ev3dev and any SSH-compliant device.
 
 ### 2.4) Design and implementation constraints
+*CO-1*: Project software shall use Google Tensorflow version 2 for
+reinforcement learning as learning algorithms must be efficient and secure.
+
+*CO-2*: Project software shall use C++ for robot interaction and control as 
+development language must be supported out-of-the-box on ev3dev and provide a 
+balance of real-time performance and scalability.
+
+*CO-3*: Project software shall conform to [INSERT NASA THE POWER OF TEN 
+REFERENCE HERE] as chances of system failure should be minimized during 
+robot training.
 
 ### 2.5) Assumptions and dependencies
 
