@@ -26,7 +26,29 @@ Project codename "StairClimb3r" will encapsulate a Lego Mindstorms EV3-based rob
 ### 2.1) Product perspective
 Project codename "StairClimb3r" is a new robotic system that is intended to be used for educational purposes (i.e. demonstrating how reinforcement learning can be used in contemporary robotics). The context diagram below illustrates all external entities and system interfaces for release 1.0.
 
-[ADD CONTEXT DIAGRAM HERE]
+```mermaid
+flowchart TD;
+   %% Nodes
+   Software((StairClimb3r\n Software));
+   Robot[(StairClimb3r\n Robot)];
+   ev3dev(ev3dev);
+   device(SSH-Compliant\n Device);
+   
+   %% Node styles
+   classDef StairClimb3r fill:#be4f62;
+   classDef Devices fill:#ffe5b4;
+   
+   class Software,Robot StairClimb3r;
+   class ev3dev,device Devices;
+   
+   %% Links
+   Software -- instruction for robot --> ev3dev;
+   ev3dev -- C++ API --> Software;
+   ev3dev -- action for robot --> Robot;
+   Robot -- action response --> ev3dev;
+   ev3dev -- updated RL model --> device;
+   device -- updated software --> ev3dev;
+```
 
 
 ### 2.2) User classes and characteristics
