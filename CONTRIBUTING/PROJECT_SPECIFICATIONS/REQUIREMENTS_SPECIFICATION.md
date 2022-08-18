@@ -25,8 +25,11 @@ environment. For the full project roadmap, see [INSERT PROJECT ROADMAP
 REFERENCE CITATION HERE].
 
 ### 1.4) References
-[CITE AND ADD PROJECT ROADMAP LINK HERE]
-[CITE AND ADD NASA THE POWER OF TEN REFERENCE HERE]
+1. Contribution Team. *Project Codename 
+"Stair-Climbing-Robot" Roadmap*,
+[Project Roadmap](../PROJECT_VISION/ROADMAP.md)
+<br>
+2. [CITE AND ADD NASA THE POWER OF TEN REFERENCE HERE]
 
 
 ## 2) Overall description
