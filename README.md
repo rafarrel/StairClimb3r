@@ -1,2 +1,2 @@
 # Stair-Climbing-Robot
-Lego Mindstorms Ev3-powered robot that will climb up and down stairs
+Lego Mindstorms EV3-based robot that will climb up and down stairs
