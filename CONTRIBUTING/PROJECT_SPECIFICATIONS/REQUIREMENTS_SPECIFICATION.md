@@ -59,6 +59,11 @@ Project codename "StairClimb3r" is a new robotic system that is intended to be u
 
 
 ### 2.5) Assumptions and dependencies
+*AS-1*: Users of this software will have their own robot hardware to run it on.
+
+*DE-1*: Robot hardware must be built for the software to operate.
+
+*DE-2*: ev3dev must be installed on the Lego Mindstorms EV3 Intelligent Brick for software to operate.
 
 
 ## 3) System features
