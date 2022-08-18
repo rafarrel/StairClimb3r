@@ -12,7 +12,7 @@ No special typographical conventions are used in this SRS.
 
 
 ### 1.3) Project scope
-Project codename "StairClimb3r" will encapsulate a Lego Mindstorms EV3-based robotic system that will learn to climb up and down stairs through trial and error. Software for this project will be responsible for controlling robot hardware and training it to interact with its surrounding environment. For the full project roadmap, see *Project Codename "StairClimb3r" Roadmap*[1].
+Project codename "StairClimb3r" will encapsulate a Lego Mindstorms EV3-based robotic system that will learn to climb up and down stairs through trial and error. Software for this project will be responsible for controlling robot hardware and training it to interact with its environment. For the full project roadmap, see *Project Codename "StairClimb3r" Roadmap*[1].
 
 
 ### 1.4) References
@@ -59,7 +59,7 @@ Project codename "StairClimb3r" is a new robotic system that is intended to be u
 
 
 ### 2.5) Assumptions and dependencies
-*AS-1*: Users of this software will have their own robot hardware to run it on.
+*AS-1*: Users of this software will have their own robot hardware built.
 
 *DE-1*: Robot hardware must be built for the software to operate.
 
