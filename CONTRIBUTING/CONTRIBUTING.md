@@ -1,3 +1,4 @@
+# Contributing to Project Codename StairClimb3r 
 [PLACEHOLDER] -> This markdown file will act as the central
 document to reference for any contributors to the project.
 It will contain a map for navigating all project 

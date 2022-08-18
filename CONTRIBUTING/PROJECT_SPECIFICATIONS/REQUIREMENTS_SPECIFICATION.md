@@ -1,10 +1,10 @@
-# Project Codename Stair-Climbing-Robot 
+# Project Codename StairClimb3r 
 ### Software Requirements Specification
 
 
 ## 1) Introduction
 ### 1.1) Purpose
-This software requirements specification document describes the functional and nonfunctional requirements for software release 1.0 of project codename "Stair-Climbing-Robot". This document is intended to be used by all project contributors and should serve as the central definition of project requirements. Unless otherwise noted, all requirements specified here are committed for release 1.0.
+This software requirements specification document describes the functional and nonfunctional requirements for software release 1.0 of project codename "StairClimb3r". This document is intended to be used by all project contributors and should serve as the central definition of project requirements. Unless otherwise noted, all requirements specified here are committed for release 1.0.
 
 
 ### 1.2) Document conventions
@@ -12,11 +12,11 @@ No special typographical conventions are used in this SRS.
 
 
 ### 1.3) Project scope
-Project codename "Stair-Climbing-Robot" will encapsulate a Lego Mindstorms EV3-based robotic system that will learn to climb up and down stairs through trial and error. Software for this project will be responsible for controlling robot hardware and training it to interact with its surrounding environment. For the full project roadmap, see *Project Codename "Stair-Climbing-Robot" Roadmap*[1].
+Project codename "StairClimb3r" will encapsulate a Lego Mindstorms EV3-based robotic system that will learn to climb up and down stairs through trial and error. Software for this project will be responsible for controlling robot hardware and training it to interact with its surrounding environment. For the full project roadmap, see *Project Codename "StairClimb3r" Roadmap*[1].
 
 
 ### 1.4) References
-1. Farrell, Alex. *Project Codename "Stair-Climbing-Robot" Roadmap*, [Project Roadmap](../PROJECT_VISION/ROADMAP.md).
+1. Farrell, Alex. *Project Codename "StairClimb3r" Roadmap*, [Project Roadmap](../PROJECT_VISION/ROADMAP.md).
 2. Holzmann, Gerard. *The Power of Ten – Rules for Developing Safety Critical Code*, https://spinroot.com/gerard/pdf/P10.pdf.
 3. Stroustrup, Sutter. *C++ Core Guidelines*, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 4. Rossum, Warsaw, Coghlan. *PEP 8 – Style Guide for Python Code*, https://peps.python.org/pep-0008/
@@ -24,7 +24,7 @@ Project codename "Stair-Climbing-Robot" will encapsulate a Lego Mindstorms EV3-b
 
 ## 2) Overall description
 ### 2.1) Product perspective
-Project codename "Stair-Climbing-Robot" is a new robotic system that is intended to be used for educational purposes (i.e. demonstrating how reinforcement learning can be used in contemporary robotics). The context diagram below illustrates all external entities and system interfaces for release 1.0.
+Project codename "StairClimb3r" is a new robotic system that is intended to be used for educational purposes (i.e. demonstrating how reinforcement learning can be used in contemporary robotics). The context diagram below illustrates all external entities and system interfaces for release 1.0.
 
 [ADD CONTEXT DIAGRAM HERE]
 
@@ -32,7 +32,7 @@ Project codename "Stair-Climbing-Robot" is a new robotic system that is intended
 ### 2.2) User classes and characteristics
 | User Class | Description |
 |------------|-------------|
-| Project Developers (favored) | Any developers contributing to Project Codename "Stair-Climbing-Robot". They are the primarily targeted user class as this project is intended for hands-on practice implementing reinforcement learning in a robotics context. | 
+| Project Developers (favored) | Any developers contributing to Project Codename "StairClimb3r". They are the primarily targeted user class as this project is intended for hands-on practice implementing reinforcement learning in a robotics context. | 
 | Other Developers | Developers of other, unrelated projects. All code will be released as open-source and can be used by developers in other projects. |
 
 
