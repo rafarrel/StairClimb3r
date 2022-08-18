@@ -20,6 +20,7 @@ Project codename "StairClimb3r" will encapsulate a Lego Mindstorms EV3-based rob
 2. Holzmann, Gerard. *The Power of Ten – Rules for Developing Safety Critical Code*, https://spinroot.com/gerard/pdf/P10.pdf.
 3. Stroustrup, Sutter. *C++ Core Guidelines*, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 4. Rossum, Warsaw, Coghlan. *PEP 8 – Style Guide for Python Code*, https://peps.python.org/pep-0008/
+5. Mermaid-js. *Mermaid Documentation*, https://mermaid-js.github.io/mermaid/#/
 
 
 ## 2) Overall description
@@ -67,17 +68,21 @@ flowchart TD;
 
 
 ### 2.4) Design and implementation constraints
-*CO-1*: Project software shall conform to *The Power of Ten – Rules for Developing Safety Critical Code*[2] as risk of system failure should be minimized during robot training.
+*CO-1*: Project documentation shall use markdown format for quick, maintainable updates.
 
-*CO-2*: Project software shall use Google Tensorflow version 2 for all Artifical Intelligence as learning algorithms must be efficient and secure.
+*CO-2*: Project documentation shall use Mermaid (see *Mermaid Documentation*[5]) for all diagrams for quick, maintainable updates.
 
-*CO-3*: Project software shall use C++ for robot interaction and control as development language must be supported out-of-the-box on ev3dev and provide a balance of real-time performance and scalability.
+*CO-3*: Project software shall conform to *The Power of Ten – Rules for Developing Safety Critical Code*[2] as risk of system failure should be minimized during robot training.
 
-*CO-4*: Project software shall use C++ or Python for Artificial Intelligence as development language must be supported out-of-the-box on ev3dev and Tensorflow.
+*CO-4*: Project software shall use Google Tensorflow version 2 for all Artifical Intelligence as learning algorithms must be efficient and secure.
 
-*CO-5*: Project software written in C++ shall conform to the *C++ Core Guidelines*[3] for standardized code development.
+*CO-5*: Project software shall use C++ for robot interaction and control as development language must be supported out-of-the-box on ev3dev and provide a balance of real-time performance and scalability.
 
-*CO-6*: Project software written in Python shall conform to *PEP 8 – Style Guide for Python Code*[4] for standardized code development.
+*CO-6*: Project software shall use C++ or Python for Artificial Intelligence as development language must be supported out-of-the-box on ev3dev and Tensorflow.
+
+*CO-7*: Project software written in C++ shall conform to the *C++ Core Guidelines*[3] for standardized code development.
+
+*CO-8*: Project software written in Python shall conform to *PEP 8 – Style Guide for Python Code*[4] for standardized code development.
 
 
 ### 2.5) Assumptions and dependencies
