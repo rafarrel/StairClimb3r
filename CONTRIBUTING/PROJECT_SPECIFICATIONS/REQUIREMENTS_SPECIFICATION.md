@@ -18,9 +18,9 @@ StairClimb3r will encapsulate a Lego Mindstorms EV3-based robotic system that wi
 2. Holzmann, Gerard. *The Power of Ten – Rules for Developing Safety Critical Code*, https://spinroot.com/gerard/pdf/P10.pdf.
 3. Stroustrup, Sutter. *C++ Core Guidelines*, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 4. Rossum, Warsaw, Coghlan. *PEP 8 – Style Guide for Python Code*, https://peps.python.org/pep-0008/
-5. Mermaid-js. *Mermaid Documentation*, https://mermaid-js.github.io/mermaid/#/
-6. Tensorflow. *Tensorflow Homepage*, https://www.tensorflow.org/
-7. ev3dev. *ev3dev Homepage*, https://www.ev3dev.org/
+5. Mermaid-js. *Mermaid*, https://mermaid-js.github.io/mermaid/#/
+6. Google. *Tensorflow*, https://www.tensorflow.org/
+7. ev3dev. *ev3dev*, https://www.ev3dev.org/
 
 
 ## 2) Overall description
@@ -32,6 +32,7 @@ flowchart TD;
    %% Nodes
    Software((StairClimb3r\n Software));
    Robot[(StairClimb3r\n Robot)];
+   Remote[(Remote Control)];
    ev3dev(ev3dev);
    device(SSH-Compliant\n Device);
    
@@ -42,16 +43,19 @@ flowchart TD;
    
    class Software Software;
    class ev3dev,device Devices;
-   class Robot Hardware;
+   class Robot,Remote Hardware;
    
    %% Links
-   Software -- instruction for robot --> ev3dev;
-   ev3dev -- C++ API for robot hardware --> Software;
-   ev3dev -- action for robot --> Robot;
-   Robot -- action result --> ev3dev;
-   ev3dev -- action results log --> device;
-   ev3dev -- updated RL model --> device;
-   device -- updated software --> ev3dev;
+   Software -- instruction for robot ---> ev3dev;
+   ev3dev -- C++ API for\n robot hardware ---> Software;
+   ev3dev -- action result ---> Software;
+   ev3dev -- action for robot ---> Robot;
+   Robot -- action result ---> ev3dev;
+   ev3dev -- action results log ---> device;
+   ev3dev -- updated RL model ---> device;
+   device -- updated software ---> ev3dev;
+   ev3dev -- Signal ---> Remote;
+   Remote -- Operating\n Mode ---> ev3dev;
 ```
 
 
@@ -63,7 +67,7 @@ flowchart TD;
 
 
 ### 2.3) Operating environment
-*OE-1*: Project software shall operate on the Lego Mindstorms EV3 Intelligent Brick with ev3dev (see *ev3dev Homepage*[7]) version 2020-04-10 installed.
+*OE-1*: Project software shall operate on the Lego Mindstorms EV3 Intelligent Brick with *ev3dev*[7] version 2020-04-10 installed.
 
 *OE-2*: Project software shall be accessed and updated through SSH communication between ev3dev and any SSH-compliant device.
 
@@ -71,11 +75,11 @@ flowchart TD;
 ### 2.4) Design and implementation constraints
 *CO-1*: Project documentation shall use markdown format for quick, maintainable updates.
 
-*CO-2*: Project documentation shall use Mermaid (see *Mermaid Documentation*[5]) for all diagrams for quick, maintainable updates.
+*CO-2*: Project documentation shall use *Mermaid*[5] for all diagrams for quick, maintainable updates.
 
 *CO-3*: Project software shall conform to *The Power of Ten – Rules for Developing Safety Critical Code*[2] as risk of system failure should be minimized during robot training.
 
-*CO-4*: Project software shall use Google Tensorflow version 2 (see *Tensorflow Homepage*[6]) for all Artifical Intelligence as learning algorithms must be efficient and secure.
+*CO-4*: Project software shall use *Tensorflow*[6] version 2 for all Artifical Intelligence as learning algorithms must be efficient and secure.
 
 *CO-5*: Project software shall use C++ for robot interaction and control as development language must be supported out-of-the-box on ev3dev and provide a balance of real-time performance and scalability.
 
@@ -87,9 +91,9 @@ flowchart TD;
 
 
 ### 2.5) Assumptions and dependencies
-*AS-1*: Users of this software will have their own robot hardware built with ev3dev installed.
+*AS-1*: Users of this software will have their own robot hardware built with *ev3dev*[7] installed.
 
-*DE-1*: Google Tensorflow version 2 must be installed on ev3dev. 
+*DE-1*: *Tensorflow*[6] version 2 must be installed on ev3dev. 
 
 
 ## 3) System features
