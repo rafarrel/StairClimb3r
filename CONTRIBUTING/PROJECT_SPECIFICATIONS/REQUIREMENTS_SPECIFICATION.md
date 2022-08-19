@@ -97,10 +97,40 @@ flowchart TD;
 
 
 ## 3) System features
-### 3.x System feature X
-#### 3.x.1 Description
-#### 3.x.2 Functional requirements
+### 3.1 Start up robot
+#### 3.1.1 Description
+ADD HERE
 
+#### 3.1.2 Functional requirements
+ADD HERE
+
+### 3.2 Set operating mode
+#### 3.2.1 Description
+Any user of StairClimb3r should be able to set the operating mode (Learning, Active) using the Lego Mindstorms Ev3 Infrared Remote at any time while the robot is running. The user should be able to change the operating mode while the robot is in another operating mode (ex: changing from Learning to Active mode). High Priority.
+
+#### 3.2.2 Functional requirements
+ADD HERE
+
+### 3.3 Learning mode
+#### 3.3.1 Description
+High Priority
+
+#### 3.3.2 Functional requirements
+ADD HERE
+
+### 3.4 Active mode
+#### 3.4.1 Description
+High Priority.
+
+#### 3.4.2 Functional requirements
+ADD HERE
+
+### 3.5 Shut down robot
+#### 3.5.1 Description
+ADD HERE
+
+#### 3.5.2 Functional requirements
+ADD HERE
 
 ## 4) Data requirements
 ### 4.1) Logical data model
