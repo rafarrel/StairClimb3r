@@ -30,32 +30,35 @@ StairClimb3r is a new robotic system that is intended to be used for educational
 ```mermaid
 flowchart TD;
    %% Nodes
-   Software((StairClimb3r\n Software));
-   Robot[(StairClimb3r\n Robot)];
-   Remote[(Remote Control)];
-   ev3dev(ev3dev);
-   device(SSH-Compliant\n Device);
+   user(["User"]);
+   remote[("Infrared Remote")];
+   device("SSH-Compliant\n Device");
+   ev3dev("ev3dev");
+   robot[("StairClimb3r\n Robot")];
+   software(("StairClimb3r\n Software"));
    
    %% Node styles
    classDef Software fill:#be4f62;
    classDef Devices fill:#ffe5b4;
    classDef Hardware fill:#87CEEB;
+   classDef Users fill:#90ee90;
    
-   class Software Software;
+   class software Software;
    class ev3dev,device Devices;
-   class Robot,Remote Hardware;
+   class robot,remote Hardware;
+   class user Users;
    
    %% Links
-   Software -- instruction for robot ---> ev3dev;
-   ev3dev -- C++ API for\n robot hardware ---> Software;
-   ev3dev -- action result ---> Software;
-   ev3dev -- action for robot ---> Robot;
-   Robot -- action result ---> ev3dev;
-   ev3dev -- action results log ---> device;
-   ev3dev -- updated RL model ---> device;
-   device -- updated software ---> ev3dev;
-   ev3dev -- Signal ---> Remote;
-   Remote -- Operating\n Mode ---> ev3dev;
+   user -- "input" ---> device;
+   user -- "input" ---> remote;
+   remote -- "operating\n mode" ---> ev3dev;
+   device -- "updated software" ---> ev3dev;
+   ev3dev -- "robot files\n (remote access)" ---> device;
+   ev3dev -- "action for robot" ---> robot;
+   robot -- "action result" ---> ev3dev;
+   ev3dev -- "C++ API for\n robot hardware" ---> software;
+   software -- "C++ API call" ---> ev3dev;
+   ev3dev -- "C++ API call\n result" ---> software;
 ```
 
 
@@ -93,13 +96,32 @@ flowchart TD;
 ### 2.5) Assumptions and dependencies
 *AS-1*: Users of this software will have their own robot hardware built with *ev3dev*[7] installed.
 
+*AS-2*: Users of this software will have a Lego Mindstorms Ev3 Infrared Remote synced to the robot hardware.
+
 *DE-1*: *Tensorflow*[6] version 2 must be installed on ev3dev. 
 
 
 ## 3) System features
-### 3.x System feature X
-#### 3.x.1 Description
-#### 3.x.2 Functional requirements
+### 3.1 Set operating mode
+#### 3.1.1 Description
+Any user of StairClimb3r should be able to set the operating mode (Learning, Active) using the Lego Mindstorms Ev3 Infrared Remote at any time while the robot is running. The user should be able to change the operating mode while the robot is in another operating mode (ex: changing from Learning to Active mode). High Priority.
+
+#### 3.1.2 Functional requirements
+ADD HERE
+
+### 3.2 Learning mode
+#### 3.2.1 Description
+High Priority
+
+#### 3.2.2 Functional requirements
+ADD HERE
+
+### 3.3 Active mode
+#### 3.3.1 Description
+High Priority.
+
+#### 3.3.2 Functional requirements
+ADD HERE
 
 
 ## 4) Data requirements
