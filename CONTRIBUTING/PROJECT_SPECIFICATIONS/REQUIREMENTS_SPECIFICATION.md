@@ -98,29 +98,38 @@ flowchart TD;
 
 *AS-2*: Users of this software will have a Lego Mindstorms Ev3 Infrared Remote synced to the robot hardware.
 
+*AS-3*: Users of this software will position StairClimb3r in front of stairs so it only has to walk forward to find them.
+
 *DE-1*: *Tensorflow*[6] version 2 must be installed on ev3dev. 
 
 
 ## 3) System features
 ### 3.1 Set operating mode
 #### 3.1.1 Description
-Any user of StairClimb3r should be able to set the operating mode (Learning, Active) using the Lego Mindstorms Ev3 Infrared Remote at any time while the robot is running. The user should be able to change the operating mode while the robot is in another operating mode (ex: changing from Learning to Active mode). High Priority.
+Any user of StairClimb3r should be able to set the operating mode (Learning, Active, Idle) using the Lego Mindstorms Ev3 Infrared Remote at any time while the robot is running. The user should be able to change the operating mode while the robot is in another operating mode (ex: changing from Learning to Active mode). Priority: High.
 
 #### 3.1.2 Functional requirements
 ADD HERE
 
 ### 3.2 Learning mode
 #### 3.2.1 Description
-High Priority
+While in Learning mode, StairClimb3r should continuously attempt to climb up/down the stairs in front of it, updating its learning model with each attempt. StairClimb3r should not stop this behavior until the operating mode is changed or the robot is powered off. Priority: High.
 
 #### 3.2.2 Functional requirements
 ADD HERE
 
 ### 3.3 Active mode
 #### 3.3.1 Description
-High Priority.
+While in Active mode, StairClimb3r should use its learning model to walk up/down the stairs in front of it without updating the learning model. It should keep a log of all its movements for review by the user and stop when it has successfully climbed both up and down the stairs. Priority: High.
 
 #### 3.3.2 Functional requirements
+ADD HERE
+
+### 3.4 Idle mode
+#### 3.4.1 Description
+While in Idle mode, StairClimb3r should stand by and do nothing while waiting for the learning mode to change. Priority: Medium.
+
+#### 3.4.2 Functional requirements
 ADD HERE
 
 
