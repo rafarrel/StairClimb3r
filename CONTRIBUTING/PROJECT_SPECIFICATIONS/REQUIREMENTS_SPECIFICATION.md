@@ -19,6 +19,8 @@ StairClimb3r will encapsulate a Lego Mindstorms EV3-based robotic system that wi
 3. Stroustrup, Sutter. *C++ Core Guidelines*, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 4. Rossum, Warsaw, Coghlan. *PEP 8 – Style Guide for Python Code*, https://peps.python.org/pep-0008/
 5. Mermaid-js. *Mermaid Documentation*, https://mermaid-js.github.io/mermaid/#/
+6. Tensorflow. *Tensorflow Homepage*, https://www.tensorflow.org/
+7. ev3dev. *ev3dev Homepage*, https://www.ev3dev.org/
 
 
 ## 2) Overall description
@@ -34,17 +36,20 @@ flowchart TD;
    device(SSH-Compliant\n Device);
    
    %% Node styles
-   classDef StairClimb3r fill:#be4f62;
+   classDef Software fill:#be4f62;
    classDef Devices fill:#ffe5b4;
+   classDef Hardware fill:#87CEEB;
    
-   class Software,Robot StairClimb3r;
+   class Software Software;
    class ev3dev,device Devices;
+   class Robot Hardware;
    
    %% Links
    Software -- instruction for robot --> ev3dev;
-   ev3dev -- C++ API --> Software;
+   ev3dev -- C++ API for robot hardware --> Software;
    ev3dev -- action for robot --> Robot;
-   Robot -- action response --> ev3dev;
+   Robot -- action result --> ev3dev;
+   ev3dev -- action results log --> device;
    ev3dev -- updated RL model --> device;
    device -- updated software --> ev3dev;
 ```
@@ -58,7 +63,7 @@ flowchart TD;
 
 
 ### 2.3) Operating environment
-*OE-1*: Project software shall operate on the Lego Mindstorms EV3 Intelligent Brick with ev3dev, an embedded Linux distribution based on Debian, version 2020-04-10 installed.
+*OE-1*: Project software shall operate on the Lego Mindstorms EV3 Intelligent Brick with ev3dev (see *ev3dev Homepage*[7]) version 2020-04-10 installed.
 
 *OE-2*: Project software shall be accessed and updated through SSH communication between ev3dev and any SSH-compliant device.
 
@@ -70,7 +75,7 @@ flowchart TD;
 
 *CO-3*: Project software shall conform to *The Power of Ten – Rules for Developing Safety Critical Code*[2] as risk of system failure should be minimized during robot training.
 
-*CO-4*: Project software shall use Google Tensorflow version 2 for all Artifical Intelligence as learning algorithms must be efficient and secure.
+*CO-4*: Project software shall use Google Tensorflow version 2 (see *Tensorflow Homepage*[6]) for all Artifical Intelligence as learning algorithms must be efficient and secure.
 
 *CO-5*: Project software shall use C++ for robot interaction and control as development language must be supported out-of-the-box on ev3dev and provide a balance of real-time performance and scalability.
 
@@ -139,9 +144,3 @@ flowchart TD;
 
 
 ## 8) Other requirements
-
-
-## Appendix A: Glossary
-
-
-## Appendix B: Analysis models
