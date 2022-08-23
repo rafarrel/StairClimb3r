@@ -2,7 +2,7 @@
 
 ## 1) Introduction
 ### 1.1) Purpose
-This software requirements specification document describes the functional and nonfunctional requirements for software release 1.0 of StairClimb3r. This document is intended to be used by all project contributors and should serve as the central definition of project requirements. Unless otherwise noted, all requirements specified here are committed for release 1.0.
+This software requirements specification document describes the functional and nonfunctional requirements for software release 0.1 of StairClimb3r. This document is intended to be used by all project contributors and should serve as the central definition of project requirements. Unless otherwise noted, all requirements specified here are committed for release 0.1.
 
 
 ### 1.2) Document conventions
@@ -10,11 +10,10 @@ No special typographical conventions are used in this SRS.
 
 
 ### 1.3) Project scope
-StairClimb3r will encapsulate a Lego Mindstorms EV3-based robotic system that will learn to climb up and down stairs through trial and error. Software for this project will be responsible for controlling robot hardware and training it to interact with its environment. For the full project roadmap, see *StairClimb3r Roadmap*[1].
+StairClimb3r will encapsulate a Lego Mindstorms EV3-based robotic system that will learn to climb up and down stairs through trial and error. Software for this project will be responsible for controlling robot hardware and training it to interact with its environment. 
 
 
 ### 1.4) References
-1. Farrell, Alex. *StairClimb3r Roadmap*, [Project Roadmap](../PROJECT_VISION/ROADMAP.md).
 2. Holzmann, Gerard. *The Power of Ten – Rules for Developing Safety Critical Code*, https://spinroot.com/gerard/pdf/P10.pdf.
 3. Stroustrup, Sutter. *C++ Core Guidelines*, https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
 4. Rossum, Warsaw, Coghlan. *PEP 8 – Style Guide for Python Code*, https://peps.python.org/pep-0008/
@@ -25,7 +24,7 @@ StairClimb3r will encapsulate a Lego Mindstorms EV3-based robotic system that wi
 
 ## 2) Overall description
 ### 2.1) Product perspective
-StairClimb3r is a new robotic system that is intended to be used for educational purposes (i.e. demonstrating how reinforcement learning can be used in contemporary robotics). The context diagram below illustrates all external entities and system interfaces for release 1.0.
+StairClimb3r is a new robotic system that is intended to be used for educational purposes (i.e. demonstrating how reinforcement learning can be used in contemporary robotics). The context diagram below illustrates all external entities and system interfaces for release 0.1.
 
 ```mermaid
 flowchart TD;
@@ -104,78 +103,69 @@ flowchart TD;
 
 
 ## 3) System features
-### 3.1 Set operating mode
-#### 3.1.1 Description
-Any user of StairClimb3r should be able to set the operating mode (Learning, Active, Idle) using the Lego Mindstorms Ev3 Infrared Remote at any time while the robot is running. The user should be able to change the operating mode while the robot is in another operating mode (ex: changing from Learning to Active mode). Priority: High.
+See "current requirement" labeled [issues](https://github.com/rafarrel/StairClimb3r/labels) for all system features selected for the current development cycle. 
 
-#### 3.1.2 Functional requirements
-ADD HERE
-
-### 3.2 Learning mode
-#### 3.2.1 Description
-While in Learning mode, StairClimb3r should continuously attempt to climb up/down the stairs in front of it, updating its learning model with each attempt. StairClimb3r should not stop this behavior until the operating mode is changed or the robot is powered off. Priority: High.
-
-#### 3.2.2 Functional requirements
-ADD HERE
-
-### 3.3 Active mode
-#### 3.3.1 Description
-While in Active mode, StairClimb3r should use its learning model to walk up/down the stairs in front of it without updating the learning model. It should keep a log of all its movements for review by the user and stop when it has successfully climbed both up and down the stairs. Priority: High.
-
-#### 3.3.2 Functional requirements
-ADD HERE
-
-### 3.4 Idle mode
-#### 3.4.1 Description
-While in Idle mode, StairClimb3r should stand by and do nothing while waiting for the learning mode to change. Priority: Medium.
-
-#### 3.4.2 Functional requirements
-ADD HERE
+See [planned features](../PROJECT_PLANNING/PLANNED_FEATURES) for planned/future features that are not selected for the current development cycle.
 
 
 ## 4) Data requirements
 ### 4.1) Logical data model
+TBD
 
 
 ### 4.2) Data dictionary
+TBD
 
 
 ### 4.3) Reports
+TBD
 
 
 ### 4.4) Data acquisition, integrity, retention, and disposal
+TBD
 
 
 ## 5) External interface requirements
 ### 5.1) User interfaces
+TBD
 
 
 ### 5.2) Software interfaces
+TBD
 
 
 ### 5.3) Hardware interfaces
+TBD
 
 
 ### 5.4) Communications interfaces
+TBD
 
 
 ## 6) Quality attributes
 ### 6.1) Usability
+TBD
 
 
 ### 6.2) Performance
+TBD
 
 
 ### 6.3) Security
+TBD
 
 
 ### 6.4) Safety
+TBD
 
 
 ### 6.x [others]
+TBD
 
 
 ## 7) Internationalization and localization requirements
+TBD
 
 
 ## 8) Other requirements
+TBD
