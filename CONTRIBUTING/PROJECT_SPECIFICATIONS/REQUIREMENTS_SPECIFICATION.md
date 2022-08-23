@@ -103,9 +103,9 @@ flowchart TD;
 
 
 ## 3) System features
-See "current requirement" labeled [issues](https://github.com/rafarrel/StairClimb3r/labels) for all system features selected for the current development cycle. 
+See "current requirement" labeled [issues](https://github.com/rafarrel/StairClimb3r/issues) for all system features selected for the current development cycle. 
 
-See [planned features](../PROJECT_PLANNING/PLANNED_FEATURES) for planned/future features that are not selected for the current development cycle.
+See [planned features](../PROJECT_PLANNING/PLANNED_FEATURES.md) for planned/future features that are not selected for the current development cycle.
 
 
 ## 4) Data requirements
