@@ -1,5 +1,5 @@
 # Planned Features
-High-level descriptions of future/planned features. This list is dynamic and will frequently change. If a feature listed here is selected to be included in a development cycle, it will be removed from this list and labeled as a "current requirement" [issue](https://github.com/rafarrel/StairClimb3r/labels).
+High-level descriptions of future/planned features. This list is dynamic and will frequently change. If a feature listed here is selected to be included in a development cycle, it will be removed from this list and labeled as a "current requirement" [issue](https://github.com/rafarrel/StairClimb3r/issues).
 
 ## Set operating mode
 Any user of StairClimb3r should be able to set the operating mode (Learning, Active, Idle) using the Lego Mindstorms Ev3 Infrared Remote at any time while the robot is running. The user should be able to change the operating mode while the robot is in another operating mode (ex: changing from Learning to Active mode). Priority: High.
